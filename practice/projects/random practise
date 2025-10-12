@@ -1,0 +1,19 @@
+name = "amazing"
+print(name[1:6:2])
+print(len(name))
+print(name.endswith("ng"))
+print(name.count("a"))
+print(name.capitalize)
+print(name.replace("a","l"))
+
+name=["aashi",1,3,4.5]
+print(name[0])
+name[0]= "daksh"
+print(name[0])
+
+
+name={ "key": "aashi",
+       "class" : "cs",
+       "input" : [1,4,5] 
+      }
+print(name["key"])

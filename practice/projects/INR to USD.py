@@ -6,3 +6,4 @@ def usd_to_inr(inr,rate_of_usd):
 
 usd_to_inr(400,88.75)
 usd_to_inr(400,84.5)
+usd_to_inr(800,88.74)
