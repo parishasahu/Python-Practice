@@ -1,12 +1,12 @@
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import requests
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hello Aashi! 🍀 Your bot is alive!")
+def send_telegram_message(message, chat_id):
+    bot_token = "8478469633:AAEovsFIOVfA1oI9t6MqEmi2wZeaJyFbWIE" # message botfather for api key
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    params = {"chat_id": 7297809796, "text": message}
 
-app = ApplicationBuilder.token("8039378407:AAEctH_4bxy8rplxeRMJfAZN9X58BkSqlZs")
+    
+    response = requests.get(url, params=params, timeout=10)
+    return response.json()
 
-app.add_handler(CommandHandler("start", start))
-
-print("Bot is running...")
-app.run_polling()
+print(send_telegram_message("Hello world", 7297809796))
