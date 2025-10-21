@@ -1,6 +1,0 @@
-a ={
-     "name": "parisha",
-     "Branch":"CSE",
-     "SEC": "G",
-}
-print(a["name"])
